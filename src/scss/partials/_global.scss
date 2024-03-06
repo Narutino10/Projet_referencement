@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+    scroll-padding-top: 2rem;
+    font-family: "Poppins",sans-serif;
+}
+body{
+    margin: 0;
+    height: 100vh;
+}
+img{
+    max-width: 100%;
+}
+.container{
+	max-width: 1170px;
+	margin: auto;
+}
+header{
+    background-color:var(--noir);
+}
+a{
+    text-decoration:none;
+    color:inherit;
+}
+ul li{
+    list-style: none;
+    color:$white;
+    &:hover {
+        font-size: 1em; 
+        color: $grey; 
+      }
+
+}

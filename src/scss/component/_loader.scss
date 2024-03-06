@@ -1,0 +1,30 @@
+.loader{
+    width: 100%;
+    height: 100%;
+    background-color:$black ;
+    position: absolute;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 30%;
+    animation: apparition 5.5s linear ;
+}
+.logo img{
+    width: 300px;
+    height: 300px;
+}
+
+@keyframes apparition{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+.apparition-out{
+    opacity: 0;
+}

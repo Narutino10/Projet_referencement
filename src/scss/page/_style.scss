@@ -1,0 +1,299 @@
+// Page d'acceuil 
+
+/* Home */
+.home{
+    height: 100vh;
+    width: 100%;
+  }
+  
+ 
+  .home-img{
+    width: 100%;
+    height: 700px;
+  }
+  
+  
+  .home-details{
+    position: absolute;
+    bottom: 90px;
+    left: 30%;
+    z-index: var(--z-fixed);
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-items: center;
+    width: 100%;
+    
+  }
+  
+  .home-details1{
+    position: relative;
+    bottom: 30px;
+    left: 40%;
+    z-index: var(--z-fixed);
+    transform: translate(-50%, -50%);
+    display: grid;
+    justify-items: center;
+    width: 100%;
+  }
+  
+  
+#home1{
+
+    height: 600px;
+}
+.presentation{
+    display: flex;
+    justify-content: center;   
+ .logo{
+    width: 350px;
+ }
+.texte-presentation{
+    width: 500px;
+    display: flex;
+    align-items: center;
+   
+}
+}
+
+#home3{
+
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .style-card{
+    display:flex;
+}
+.card-product{
+    display: flex;
+    justify-content: center;
+}
+.card{
+    
+    width: 250px;
+    padding: 10px;
+}
+}
+
+
+#home5{
+    height: 600px;
+    background-image: url(image/boutique.webp);
+    background-size: cover;
+    .container{
+        position: relative;
+        top:150px;
+    }
+        .boutique{
+            display: flex;
+            justify-content: center;
+            background-color: aqua;
+            height: 300px;
+        .text-boutique{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color:$black;
+        }
+        }
+}
+
+#section1{
+    height: 700px;
+ 
+}
+#section3{
+    height: 700px;
+    text-align: center;
+}
+#section3 .container{
+    display: flex;
+    flex-direction: column;
+}
+
+.images{
+    display: flex;
+    justify-content: center;
+}
+.image1, .image2 {
+    width:500px;
+}
+#section2{
+
+    height: 750px;
+}
+#section2 .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.montre{
+    display: flex;
+    padding-top: 40px;
+}
+.montre-texte{
+    padding: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.montre-texte img{
+ width: 420px;
+}
+.montre-texte h1{
+   margin:0;
+    }
+.montre-texte p{
+   text-align: center;
+   }
+   .products{
+    width: 100%;
+    align-self: center;
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(220px,auto));
+    justify-content: center;
+    gap: 5.5rem;
+    padding-bottom: 50px;
+}
+.product{
+    position: relative;
+    background-color: var(--sectionBack);
+    width: 300px;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, .3);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+   align-items: center;
+    border-radius: 10px;
+    transition: .3s;
+}
+
+
+#section5{
+    height: 700px;
+}
+#section7{
+    height: 600px;
+    background-image: url(image/boutique.webp);
+    background-size: cover;
+    padding-top: 80px;
+        .boutique{
+            display: flex;
+            justify-content: center;
+            background-color: $grey;
+            height: 300px;
+        }
+        .text-boutique{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: $black;
+        }
+}
+footer{
+    background-color: $black;
+    display: flex;
+    justify-content: space-around;
+    img{
+        width: 110px;
+    }
+    .social-media{
+        display:flex;
+        color: $white;
+        div{
+            display: flex;
+            align-items: center;
+            padding: 15px;
+        }
+    }
+
+}
+#menu-button{
+    display: none
+}
+@media screen and (max-width:600px) {
+    
+    #menu-button{
+        display: flex;
+        background: transparent;
+        border: none;
+       
+    }
+    #site-nav{
+        display: none;
+    }
+    footer{
+        width: 425px;
+    }
+    .montre{
+        flex-direction: column;
+    }
+    section {
+        padding: 3rem 0 2rem;
+    }
+    #section2{
+        height: auto;
+    }
+    #section7 .boutique{
+        width: 390px;
+    }
+    .home-details
+    {
+        left: 65%;
+    }
+    .home-details1
+    {
+        left: 55%;
+    }
+    #section1 {
+        width: 400px;
+    }
+    #section5 {
+        width: 400px;
+    }
+}
+@media screen and (max-width:360px) {
+    
+    #menu-button{
+        display: flex;
+        background: transparent;
+        border: none;
+       
+    }
+    #site-nav{
+        display: none;
+    }
+    footer{
+        width: 409px;
+    }
+    .montre{
+        flex-direction: column;
+    }
+    section {
+        padding: 3rem 0 2rem;
+    }
+    #section2{
+        height: auto;
+    }
+    #section7 .boutique{
+        width: 390px;
+    }
+    .home-details
+    {
+        left: 65%;
+    }
+    .home-details1
+    {
+        left: 55%;
+    }
+    #section1 {
+        width: 400px;
+    }
+    #section5 {
+        width: 400px;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/scss/main.css">
+    
+</head>
+<body class="back-paiement">
+    <div class="paiement" id="app">
+        <div class="card-form">
+          <div class="card-list">
+            <div class="card-item" v-bind:class="{ '-active' : isCardFlipped }">
+              <div class="card-item__side -front">
+                <div class="card-item__focus" v-bind:class="{'-active' : focusElementStyle }" v-bind:style="focusElementStyle" ref="focusElement"></div>
+                <div class="card-item__cover"></div>
+                
+                
+              </div>
+              <div class="card-item__side -back"> </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-form__inner">
+            <div class="card-input">
+              <label for="cardNumber" class="card-input__label">Numéro de la carte</label>
+              <input type="text" id="cardNumber" class="card-input__input" v-mask="generateCardNumberMask" v-model="cardNumber" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardNumber" autocomplete="off">
+            </div>
+
+            <div class="card-input">
+              <label for="cardName" class="card-input__label">Titulaire de la carte</label>
+              <input type="text" id="cardName" class="card-input__input" v-model="cardName" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardName" autocomplete="off">
+            </div>
+            
+            <div class="card-form__row">
+              <div class="card-form__col">
+                <div class="card-form__group">
+                  <label for="cardMonth" class="card-input__label">Expiration Date</label>
+                  <select class="card-input__input -select" id="cardMonth" v-model="cardMonth" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
+                    <option value="Mois">Mois</option>
+                    <option value="Janvier">01</option>
+                   <option value="Fevrier">02</option>
+                   <option value="Mars">03</option>
+                   <option value="Avril">04</option>
+                   <option value="Mai">05</option>
+                   <option value="Juin">06</option>
+                   <option value="Juillet">07</option>
+                   <option value="Aout">08</option>
+                   <option value="Septembre">09</option>
+                   <option value="Octobre">10</option>
+                   <option value="Novembre">11</option>
+                   <option value="Decembre">12</option>
+                  </select>
+                  <select class="card-input__input -select"  value="ANNÉE"id="cardYear" v-model="cardYear" v-on:focus="focusInput" v-on:blur="blurInput" data-ref="cardDate">
+                    <option value="Année">Année</option>
+                    <option value="">2023</option>
+                    <option value="">2024</option>
+                    <option value="">2025</option>
+                    <option value="">2026</option>
+                    <option value="">2027</option>
+                    <option value="">2028</option>
+                  </select>
+                </div>
+              </div>
+              <div class="card-form__col -cvv">
+                <div class="card-input">
+                  <label for="cardCvv" class="card-input__label">CVV</label>
+                  <input type="text" class="card-input__input" id="cardCvv" v-mask="'####'" maxlength="4" v-model="cardCvv" v-on:focus="flipCard(true)" v-on:blur="flipCard(false)" autocomplete="off">
+                </div>
+              </div>
+            </div>
+    
+            <button class="card-form__button">
+              Payer
+            </button>
+          </div>
+        </div>
+        
+       
+      </div>
+</body>
+</html>

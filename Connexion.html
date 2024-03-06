@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion</title>
+    <link rel="stylesheet" type="text/css" href="src/scss/main.css">
+    <link rel="icon" href="assets/Logo-watchtime.png">
+   
+</head>
+<body class="background">
+    <header id="header">
+            
+        <div class="header">
+            
+            <a href="Main.html" id="logo-link">
+                <img src="assets/Logo-wachtime_white.png" alt="" id="#logo">
+            </a>
+            <nav id="site-nav">
+                <ul>
+                    <li><a href="Main.html">Accueil</a></li>
+                    <li><a href="about.html"> A propos de nous</a></li>
+                    <li><a href="#">Montre </a></li>
+                    <li><a href="#">Lunette </a></li>
+                    
+                  
+                </ul>
+            </nav>
+            <div class="header-icons">
+                
+                <a href="Connexion.html">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path fill="white" d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512H418.3c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304H178.3z"/>
+                </svg>
+                </a>
+                <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                    <path  fill="white" d="M160 112c0-35.3 28.7-64 64-64s64 28.7 64 64v48H160V112zm-48 48H48c-26.5 0-48 21.5-48 48V416c0 53 43 96 96 96H352c53 0 96-43 96-96V208c0-26.5-21.5-48-48-48H336V112C336 50.1 285.9 0 224 0S112 50.1 112 112v48zm24 48a24 24 0 1 1 0 48 24 24 0 1 1 0-48zm152 24a24 24 0 1 1 48 0 24 24 0 1 1 -48 0z"/>
+                </svg>
+                </a>
+            </div>
+            <button id="menu-button">
+                <svg height="32px" id="Layer_1" style="enable-background:new 0 0 32 32;" version="1.1" viewBox="0 0 32 32" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <path fill="#FFF" d="M4,10h24c1.104,0,2-0.896,2-2s-0.896-2-2-2H4C2.896,6,2,6.896,2,8S2.896,10,4,10z M28,14H4c-1.104,0-2,0.896-2,2  s0.896,2,2,2h24c1.104,0,2-0.896,2-2S29.104,14,28,14z M28,22H4c-1.104,0-2,0.896-2,2s0.896,2,2,2h24c1.104,0,2-0.896,2-2  S29.104,22,28,22z"/>
+                </svg>
+            </button>
+</div>
+</header>
+
+    <section class="wrapper">
+        <div class="formulaire"  id="inscription">
+            <div class="form signup">
+            <h1>Inscription</h1>
+            <form action="#">
+                <input type="text" placeholder="Nom" required />
+                <input type="text" placeholder="Prénom" required />
+                <input type="mail" placeholder="Email " required />
+                <input type="password" placeholder="Mot de passe" required />
+                <input type="submit" value="S'inscrire" class="button"/>
+            </form>
+            </div>
+    
+            <div class="form login">
+            <h1>Se connecter</h1>
+            <form action="#">
+                <input type="mail" placeholder="Email " required />
+                <input type="password" placeholder="Mot de passe" required />
+                <a href="#">Mot de passe oublié?</a>
+                <input type="submit" value="Se connecter" class="button"/>
+            </form>
+            </div>
+        </div>
+        <!-- <script>
+          const wrapper = document.querySelector(".formulaire"),
+            signupHeader = document.querySelector(".signup h1"),
+            loginHeader = document.querySelector(".login h1");
+  
+          loginHeader.addEventListener("click", () => {
+            wrapper.classList.add("active");
+          });
+          signupHeader.addEventListener("click", () => {
+            wrapper.classList.remove("active");
+          });
+        </script> -->
+         <script src="src/JS/component/formulaire.js"></script>
+         <script src="src/JS/component/login.js"></script>
+      </section>
+</body>
+</html>

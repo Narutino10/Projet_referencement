@@ -1,0 +1,20 @@
+@import 'partials/variable';
+@import 'partials/fonts.scss';
+@import 'partials/global.scss';
+@import 'partials/media-screen.scss';
+
+@import 'page/style.scss';
+@import 'page/about.scss';
+@import 'page/paiement.scss';
+@import 'page/produit.scss';
+@import 'page/shopping.scss';
+@import 'page/details.scss';
+
+
+@import 'component/formulaire.scss';
+@import 'component/input.scss';
+@import 'component/header.scss';
+@import 'component/button.scss';
+@import 'component/footer.scss';
+@import 'component/formulaire.scss';
+@import 'component/Contact';

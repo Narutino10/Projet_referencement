@@ -1,0 +1,44 @@
+.button{
+    display:block;
+    padding: 1em 2em;
+    text-transform: uppercase;
+    color:$white;
+    background-color: $black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration:none;
+    width: 300px;
+    &-article{
+        display:block;
+        padding: 1em 2em;
+    text-transform: uppercase;
+    color:$white;
+    background-color: $black;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration:none;
+    
+    }
+    &:hover{
+        background-color: lighten($white,10%);
+        color:$black;
+        border: solid 1px $black;
+        transition:0.3s;
+    }
+
+    &--succes{
+        background-color: $green;
+        &:hover{
+            background-color: lighten($green,10%);
+        }
+    }
+
+    &--alert{
+        background-color: $red;
+        &:hover{
+            background-color: lighten($red,10%);
+        }
+    }
+}

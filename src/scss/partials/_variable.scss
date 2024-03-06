@@ -1,0 +1,13 @@
+$black:#202020;
+$white:#fff;
+$green:#34c924;
+$red: #FF0000 ;
+$grey: grey;
+$blue:#2364d2;
+
+.text-black { color: $black; }
+.text-white { color: $white; background-color: $grey; /* pour rendre le blanc visible */ }
+.text-green { color: $green; }
+.text-red { color: $red; }
+.text-grey { color: $grey; }
+.text-blue { color: $blue; }

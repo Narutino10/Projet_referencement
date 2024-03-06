@@ -1,0 +1,142 @@
+.detail-section{
+    padding-top: 180px;
+}
+
+.detail-container{
+    display: flex;
+    justify-content: center;
+}
+.detail-container div img{
+    width: 400px;
+}
+.detail-description-text{
+    width: 400px;
+}
+.detail-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px;
+}
+.detail-description{
+    display: flex;
+    flex-direction: column;
+}
+.detail-produit{
+    display: flex;
+    flex-direction: column;
+}
+.detail__img{
+    width: 350px;
+}
+
+.text-center{
+    text-align: center;
+}
+.produit-container {
+    display:grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+}
+.produit-content{
+    display:grid;
+    row-gap: 20px;
+   h1,h3{
+        text-align: none;
+    }
+}
+
+.produit__img{
+    width: 350px;
+}
+.photo-section{
+    display: flex;
+    flex-direction: column;
+}
+.photo{
+    display: grid;
+    position: relative;
+    grid-template-columns: max-content 250px;
+    justify-content: center;
+    gap:35px;
+    div img{
+        width: 300px;
+        max-width: none;
+    }
+}
+
+.case__img{
+    width: 300px;
+	max-width: none;
+}
+.article{
+    display: grid;
+    grid-template-columns: repeat(2, 250px);
+    gap: 5rem 1.5rem;
+    padding-top: 3rem;
+    justify-content: center;
+    padding-bottom: 50px;
+}
+.article-card{
+    position: relative;
+    height: 160px;
+
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    display: grid;
+}
+.article-content{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-end;
+    
+}
+.article-img{
+    width: 80px;
+    position: absolute;
+    inset: 0;
+    margin-right: auto;
+    margin-left: auto;
+    top: -3rem;
+}
+
+@media screen and (max-width:600px) {
+    .detail-container{
+       
+        flex-direction: column;
+        justify-content: center;
+    }
+    .detail-section {
+        padding-top: 120px;
+    }
+    .photo {
+        grid-template-columns: none
+    }
+    .article {
+        grid-template-columns: none
+    }
+    .detail-description-text {
+        width: 360px;
+    }
+}
+@media screen and (max-width:360px) {
+    .detail-container{
+       
+        flex-direction: column;
+        justify-content: center;
+    }
+    .detail-section {
+        padding-top: 120px;
+    }
+    .photo {
+        grid-template-columns: none
+    }
+
+    .article {
+        grid-template-columns: none
+    }
+    .detail-description-text {
+        width: 360px;
+    }
+}
