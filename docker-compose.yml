@@ -1,0 +1,38 @@
+version: '3.7'
+
+services:
+  db:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: zorglux
+    volumes:
+      - db_data:/var/lib/mysql
+      - ./database/init.sql:/docker-entrypoint-initdb.d/init.sql
+    networks:
+      - zorglux-net
+
+  backend:
+    build: ./backend
+    environment:
+      DB_HOST: db
+      DB_USER: root
+      DB_PASSWORD: rootpassword
+      DB_NAME: zorglux
+    networks:
+      - zorglux-net
+    depends_on:
+      - db
+
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    networks:
+      - zorglux-net
+
+volumes:
+  db_data:
+
+networks:
+  zorglux-net:
