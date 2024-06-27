@@ -52,37 +52,24 @@
         <div class="formulaire"  id="inscription">
             <div class="form signup">
             <h1>Inscription</h1>
-            <form action="#">
-                <input type="text" placeholder="Nom" required />
-                <input type="text" placeholder="Prénom" required />
-                <input type="mail" placeholder="Email " required />
-                <input type="password" placeholder="Mot de passe" required />
-                <input type="submit" value="S'inscrire" class="button"/>
+            <form action="../backend/register.php" method="post">
+                Nom d'utilisateur: <input type="text" name="username" required><br>
+                Mot de passe: <input type="password" name="password" required><br>
+                <input type="submit" value="S'inscrire">
             </form>
             </div>
     
             <div class="form login">
             <h1>Se connecter</h1>
-            <form action="#">
-                <input type="mail" placeholder="Email " required />
-                <input type="password" placeholder="Mot de passe" required />
-                <a href="#">Mot de passe oublié?</a>
-                <input type="submit" value="Se connecter" class="button"/>
-            </form>
+            <form action="../backend/login.php" method="post">
+                Nom d'utilisateur: <input type="text" name="username"><br>
+                Mot de passe: <input type="password" name="password"><br>
+                <input type="submit" value="Connexion">
+              </form>
+              
             </div>
         </div>
-        <!-- <script>
-          const wrapper = document.querySelector(".formulaire"),
-            signupHeader = document.querySelector(".signup h1"),
-            loginHeader = document.querySelector(".login h1");
-  
-          loginHeader.addEventListener("click", () => {
-            wrapper.classList.add("active");
-          });
-          signupHeader.addEventListener("click", () => {
-            wrapper.classList.remove("active");
-          });
-        </script> -->
+
          <script src="src/JS/component/formulaire.js"></script>
          <script src="src/JS/component/login.js"></script>
       </section>
